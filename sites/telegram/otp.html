@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Input</title>
+</head>
+<body>
+    <h1>Enter the OTP Sent to Your Phone Number</h1>
+    <form id="otpForm">
+        <label for="otp">OTP:</label><br>
+        <input type="text" id="otp" name="otp" required><br><br>
+        <input type="button" value="Submit" onclick="submitOTP()">
+    </form>
+
+    <script>
+        function submitOTP() {
+            var otp = document.getElementById('otp').value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/submit/otp", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Upon successful submission, do something (e.g., redirect to a success page)
+                    alert("OTP Submitted Successfully!");
+                }
+            };
+            xhr.send(JSON.stringify({ otp: otp }));
+        }
+    </script>
+</body>
+</html>
