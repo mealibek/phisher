@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram Groups</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
-    <main>
-        <!-- Telegram -> Private Group Logos -->
-        <!-- "Sign in to Telegram" -->
-        <!-- "Please confirm your country code and enter your phone number" -->
-        
-        <!-- form -->
-            <!-- Country Select input-->
-            <!-- Phone number input -->
-            <!-- Cancel or Next Buttons -->
-        <!-- /form -->
+    <main class="mx-auto p-4">
+
+        <div class="flex flex-col items-center justify-center mt-20">
+            <div class="mb-8">
+                <img src="Telegram.svg" alt="SVG Image" width="100" height="100">
+            </div>
+            <h1 class="text-3xl font-bold mb-4">Войти в Telegram</h1>
+            <p class="text-gray-600 mb-8 text-center font-medium">
+                Проверьте код страны и введите свой номер телефона.
+            </p>
+            <form class="flex flex-col items-center space-y-8 w-[300px]">
+                <div class="relative w-full">
+                    <input type="text" id="floating_outlined"
+                        class="block px-2.5 pb-2.5 pt-4 w-full text-sm font-medium  text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder="" value="Киргизия" />
+                    <label for="floating_outlined"
+                        class="absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Страна</label>
+                </div>
+                <div class="relative w-full">
+                    <input type="text" id="floating_outlined"
+                        class="block px-2.5 pb-2.5 pt-4 w-full text-sm font-medium text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder="" />
+                    <label for="floating_outlined"
+                        class="absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Номер телефона</label>
+                </div>
+
+                <div class="flex gap-4 w-full">
+                    <button type="button"
+                        class="w-full text-white bg-blue-700 hover:bg-blue-800 font-semi-bold focus:ring-4 focus:ring-blue-300 rounded-lg text-md px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">ДАЛЕЕ</button>
+                </div>
+            </form>
+        </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
+
 </html>
